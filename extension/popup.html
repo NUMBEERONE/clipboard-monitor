@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">Whisper ClipGuard</span>
+            </div>
+            <div class="status-indicator" id="statusIndicator">
+                <span class="status-dot"></span>
+                <span class="status-text">Active</span>
+            </div>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-value" id="totalWhispers">--</div>
+                <div class="stat-label">Whispers (30d)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="protectionScore">--</div>
+                <div class="stat-label">Protection Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="cancelledPercent">--</div>
+                <div class="stat-label">Cancelled %</div>
+            </div>
+        </div>
+        
+        <!-- Silent Mode Toggle -->
+        <div class="silent-mode-section">
+            <div class="silent-mode-header">
+                <span>🔇 Silent Mode</span>
+                <label class="toggle">
+                    <input type="checkbox" id="silentModeToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="silent-mode-options" id="silentOptions" style="display: none;">
+                <span>Duration:</span>
+                <select id="silentDuration">
+                    <option value="5">5 min</option>
+                    <option value="15">15 min</option>
+                    <option value="30">30 min</option>
+                    <option value="60">1 hour</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Quick Actions -->
+        <div class="actions">
+            <button class="action-btn" id="viewDashboard">
+                📊 Full Dashboard
+            </button>
+            <button class="action-btn secondary" id="manageAllowlist">
+                📋 Allowlist
+            </button>
+            <button class="action-btn secondary" id="managePatterns">
+                🔧 Custom Patterns
+            </button>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <span class="footer-text">All data stays local</span>
+            <span class="footer-dot">•</span>
+            <span class="footer-text">v1.0.0</span>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
